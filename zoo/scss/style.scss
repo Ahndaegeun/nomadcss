@@ -1,0 +1,61 @@
+@import "_variable";
+@import "_mixin";
+
+.body__container {
+    & > * {
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+    }
+    position: relative;
+    height: 100%;
+    header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        nav {
+            width: 100%;
+            display: flex;
+            font-size: 30px;
+            font-weight: bold;
+            .left-menu {
+                width: 67%;
+                @include rowFlex();
+                h1 {
+                    width: 16.6%;
+                    color: $black;
+                    padding: 10px 0 10px 15px;
+                }
+                .menu {
+                    width: 100%;
+                    @include rowFlex();
+                    padding: 10px 0;
+                    span {
+                        display: block;
+                        color: $gray;
+                        margin-right: 55px;
+                    }
+                }
+            }
+            .right-menu {
+                width: 33%;
+                @include rowFlex();
+                align-items: flex-end;
+                span {
+                    display: block;
+                    padding: 10px 0;
+                }
+                span:first-child {
+                    margin-right: 130px;
+                }
+                span:nth-child(2) {
+                    margin-right: auto;
+                }
+                span:last-child {
+                    font-size: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}
