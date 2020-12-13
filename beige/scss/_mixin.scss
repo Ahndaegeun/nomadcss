@@ -1,6 +1,43 @@
-@mixin afterDot(color) {
+@mixin beforeDot($color) {
     &::before {
         content: "";
-        display: block;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: $color;
+        margin-right: 5px;
+    }
+}
+
+@mixin cards($color) {
+    padding: 17px;
+    background: $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card-head {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+    }
+    .card-contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 140px;
+            height: 212px;
+            margin-bottom: 38px;
+        }
+        strong {
+            font-weight: bold;
+        }
+    }
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
     }
 }
