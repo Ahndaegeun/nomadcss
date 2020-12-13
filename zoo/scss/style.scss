@@ -13,26 +13,42 @@
         left: 0;
         right: 0;
         top: 0;
+        z-index: 1;
+        background: $white;
         nav {
             width: 100%;
             display: flex;
             font-size: 30px;
             font-weight: bold;
+            cursor: pointer;
             .left-menu {
                 width: 67%;
                 @include rowFlex();
+                &:hover {
+                    background: $gray;
+                    .menu {
+                        color: $black;
+                    }
+                }
                 h1 {
                     width: 16.6%;
                     color: $black;
                     padding: 10px 0 10px 15px;
+                    &:hover {
+                        color: $white;
+                    }
                 }
                 .menu {
                     width: 100%;
                     @include rowFlex();
                     padding: 10px 0;
+                    color: $gray;
+                    &:hover {
+                        color: $white;
+                    }
                     span {
                         display: block;
-                        color: $gray;
+                        color: inherit;
                         margin-right: 55px;
                     }
                 }
@@ -41,9 +57,12 @@
                 width: 33%;
                 @include rowFlex();
                 align-items: flex-end;
+                &:hover {
+                    background: $gray;
+                }
                 span {
                     display: block;
-                    padding: 10px 0;
+                    padding: 10px 0 10px 5px;
                 }
                 span:first-child {
                     margin-right: 130px;
@@ -54,6 +73,34 @@
                 span:last-child {
                     font-size: 15px;
                     padding-right: 15px;
+                }
+            }
+        }
+    }
+    main {
+        height: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        section {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 30px;
+            .row__container {
+                height: 100%;
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                    h2 {
+                        padding: 5px;
+                        text-align: left;
+                    }
                 }
             }
         }
