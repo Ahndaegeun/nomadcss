@@ -1,0 +1,1 @@
+https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ritwickdey/vsextensions/LiveServer/5.6.1/vspackage
