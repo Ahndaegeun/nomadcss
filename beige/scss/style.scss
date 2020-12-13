@@ -1,0 +1,55 @@
+@import "_variable";
+
+.body__container {
+    position: relative;
+    height: 100vh;
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: $white;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        h1 {
+            margin-left: 20px;
+            padding: 5px 0;
+            text-transform: uppercase;
+            a {
+                color: $black;
+                font-size: 32px;
+                text-decoration: none;
+            }
+        }
+        nav {
+            justify-self: center;
+            ul {
+                display: flex;
+                li {
+                    font-size: 28px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .btn-group {
+            justify-self: end;;
+            margin-right: 40px;
+            button {
+                width: 22px;
+                height: 22px;
+                border: none;
+                background: url("../images/magnifying-glass.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                text-indent: -9999px;
+                margin-right: 10px;
+            }
+            a {
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+    }
+}

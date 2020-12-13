@@ -1,0 +1,6 @@
+@mixin afterDot(color) {
+    &::before {
+        content: "";
+        display: block;
+    }
+}
