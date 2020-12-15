@@ -1,0 +1,116 @@
+@import "_variable";
+
+.body__container {
+    position: relative;
+    & * {
+        font-family: 'Josefin Sans', sans-serif;
+        box-sizing: border-box;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: $white;
+        padding: 20px 15px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        font-size: 17px;
+        z-index: 1;
+        h1 {
+            a {
+                color: $black;
+                &:hover {
+                    color: $blue;
+                    & strong {
+                        color: $blue;
+                    }
+                }
+                strong {
+                    color: $gray;
+                }
+            }
+        }
+        ul {
+            display: flex;
+            li {
+                a {
+                    padding: 0 5px;
+                    font-weight: 300;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        padding: 0 9px;
+        background: $white;
+        display: flex;
+        margin-top: 17px;
+        .left-space {
+            width: 25%;
+            height: 100vh;
+            background: $white;
+        }
+        .right-grid {
+            width: 75%;
+            padding: 0 10px;
+            background: $white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            column-gap: 20px;
+            .img-card {
+                width: 100%;
+                position: relative;
+                margin-bottom: 10px;
+                a {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                h3 {
+                    font-weight: 300;
+                    font-size: 17px;
+                }
+            }
+            .text-card {
+                width: 100%;
+                position: relative;
+                font-size: 17px;
+                a {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                }
+                h3 {
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+                p {
+                    width: 75%;
+                    text-align: left;
+                    font-weight: 300;
+                    line-height: 1.1;
+                }
+            }
+            .img-card:hover,
+            .text-card:hover {
+                h3 {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
