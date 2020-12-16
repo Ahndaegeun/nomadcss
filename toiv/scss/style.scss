@@ -127,5 +127,80 @@
                 }
             }
         }
+        .shop-section {
+            height: 100vh;
+            background: red;
+            grid-column: span 2;
+            ul {
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                li {
+                    height: 50vh;
+                    &:nth-child(1) { 
+                        grid-column: span 2;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Cherry-Sofa-Lookbook-3-web@2x.jpg"));
+                    }
+                    &:nth-child(2) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Figura-chair-blackoak_2-web@2x.jpg"))
+                    }
+                    &:nth-child(3) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Inlay-Chair-Lookbook-61-web@2x.jpg"))
+                    }
+                    &:nth-child(4) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Bourbon_1-web@2x.jpg"))
+                    }
+                    &:nth-child(5) { 
+                        grid-column: span 2;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Copal-3_MLF_1-web@2xv2.jpg"))
+                    }
+                    &:nth-child(6) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Kitsune-1_pine931_1-web@2x.jpg"))
+                    }
+                    &:nth-child(7) { 
+                        grid-column: span 2;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Kile-Coffeetable-Lookbook-75-web@2x.jpg"))
+                    }
+                    &:nth-child(8) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/mooli-red_1-web@2x.jpg"))
+                    }
+                    &:nth-child(9) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/Com-Chair-Lookbook-74-web@2xv2.jpg"))
+                    }
+                    &:nth-child(10) { 
+                        grid-column: span 2;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/th-Portobello-W-Sofa@2x.jpg"))
+                    }
+                    &:nth-child(11) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/th-Papa-Cushion-1@2x-1.jpg"))
+                    }
+                    &:nth-child(12) { 
+                        grid-column: span 1;
+                        @include botGridImg(url("https://tolv.dk/wp-content/uploads/2019/07/th-Neuf-ST@2x.jpg"))
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        height: 100vh;
+        background: $kaki;
+        padding: 7vh 20vw;
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
